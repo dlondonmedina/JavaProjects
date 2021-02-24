@@ -18,18 +18,15 @@ public class Email {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.department = setDepartment();
-		System.out.println("EMAIL CREATED: " + this.firstName + " " + this.lastName + " " + this.department);
 		this.password = this.randomPassword(this.passwordLengthDefault);
-		System.out.println("Your password: " + this.password);
-		
 		// Generate email
 		this.email = this.firstName.toLowerCase() + "." + this.lastName.toLowerCase() + "@" + this.department + "." + this.companySuffix;
-		System.out.println("Your email: " + this.email);
+
 	}
 	
 	// Ask for the department
 	private String setDepartment() {
-		System.out.print("Enter the Department\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none");
+		System.out.print("New worker: " + this.firstName + ". Department Codes:\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none");
 		Scanner in = new Scanner(System.in);
 		int deptChoice = in.nextInt();
 		in.close();
@@ -68,5 +65,11 @@ public class Email {
 	public int getMailboxCapacity() { return this.mailboxCapacity; }
 	public String getAlternateEmail() { return this.alternateEmail; }
 	public String getPassword() { return this.password; }
+	
+	public String showInfo() {
+		return "DISPLAY NAME: " + this.firstName + " " + this.lastName + 
+				"\nCOMPANY EMAIL: " + this.email +
+				"\nMAILBOX CAPACITY: " + this.mailboxCapacity + "mb";
+	}
 	
 }
