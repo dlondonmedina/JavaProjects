@@ -5,8 +5,7 @@ public class EmailApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Email em1 = new Email("John", "Smith");
-		
-		em1.setMailboxCapacity(2000);
+		System.out.println(em1.showInfo());
 	}
 
 }
