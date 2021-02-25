@@ -43,7 +43,7 @@ public class StudentDatabaseApp {
 		s = in.next();
 		System.out.println("Their balance is: " + student.getBalance());
 		System.out.println("Do you want to pay now? (Y/n) ");
-		if (in.next().toLowerCase() != "n") {2
+		if (in.next().toLowerCase() != "n") {
 			System.out.println("How much would you like to pay? ");
 			int payment = in.nextInt();
 			
