@@ -34,22 +34,22 @@ public class StudentDatabaseApp {
 		
 		// View Balance
 		System.out.println("Enter a Student ID to see their information: ");
-		String s = in.nextLine();
+		String s = in.next();
 		Student student = students.get(s);
 		
 		System.out.println("The balance is: " + student.getStudent());
 		
 		System.out.println("Enter a StudentID to pay tuition: ");
-		s = in.nextLine();
+		s = in.next();
 		System.out.println("Their balance is: " + student.getBalance());
 		System.out.println("Do you want to pay now? (Y/n) ");
-		if (in.nextLine().toLowerCase() != "n") {
+		if (in.next().toLowerCase() != "n") {2
 			System.out.println("How much would you like to pay? ");
 			int payment = in.nextInt();
 			
 			int balance = student.payTuition(payment);
 			if (balance >= 0) {
-				System.out.println("Thank you for your payment! \nYour balance is: $");
+				System.out.println("Thank you for your payment! \nYour balance is: $" + balance);
 			} else {
 				System.out.println("Thank you for your payment! \nYou get $" + (balance * -1) + " back as change!");
 			}
